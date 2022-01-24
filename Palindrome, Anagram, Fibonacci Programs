@@ -1,0 +1,84 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[5]:
+
+
+#Palindrome for str and int
+# EX.:121, mam, hih, 232, madam
+
+
+
+def Palindrome(c):
+    i = 111
+    s = "char"
+    if type(c)==type(s):
+        if(c==c[::-1]):  
+              print("The is a palindrome")  
+        else:  
+              print("Not a palindrome") 
+                
+    if type(c)==type(i):
+        Temp = c  
+        Rev = 0  
+        while(c > 0):  
+            dig = c % 10  
+            revrev = rev * 10 + dig  
+            num = c // 10  
+        if(temp == rev):  
+            print("The is a palindrome")  
+        else:  
+              print("Not a palindrome") 
+            
+c = input("Enter the Charater:")
+Palindrome(c)
+
+
+# In[4]:
+
+
+#Anagram for Strings and int
+# Ex.:listen-silent, 456-564
+
+
+def check(s1, s2):
+    
+    
+    # the sorted strings are checked
+    if(sorted(s1.lower())== sorted(s2.lower())):
+        print("These are anagrams.")
+    else:
+        print("These aren't anagrams.")
+
+s1 = input("Value 1:")
+s2 = input("Value 2:")
+check(s1,s2)
+
+
+# In[3]:
+
+
+# Fibonacci only for int
+# Ex.: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ……..
+
+def Fibonacci(n):
+
+    # Check if input is 0 then it will
+    # print incorrect input
+    if n < 0:
+        print("Incorrect input")
+    elif n == 0:
+        return 0
+ 
+    # Check if n is 1,2
+    # it will return 1
+    elif n == 1 or n == 2:
+        return 1
+ 
+    else:
+        return Fibonacci(n-1) + Fibonacci(n-2)
+ 
+
+
+print(Fibonacci(9))
+
